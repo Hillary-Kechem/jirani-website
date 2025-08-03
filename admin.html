@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel - Jirani</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <h1>Admin Panel</h1>
+
+  <div id="login">
+    <input type="password" id="password" placeholder="Enter admin password" />
+    <button id="loginBtn">Login</button>
+    <p id="loginMsg" style="color: red;"></p>
+  </div>
+
+  <div id="content">
+    <h2>Registrants</h2>
+    <table id="registrantsTable">
+      <thead>
+        <tr><th>Name</th><th>Email</th><th>Time Registered</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <h2>Visitors</h2>
+    <table id="visitorsTable">
+      <thead>
+        <tr><th>Visit Time</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  <script src="admin.js"></script>
+  
+</body>
+</html>
