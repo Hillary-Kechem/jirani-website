@@ -15,3 +15,17 @@ input, button {
   margin-top: 20px;
   color: #0066cc;
 }
+
+#adminBtn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #dc3545; /* bootstrap danger red */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#adminBtn:hover {
+  background-color: #c82333;
+}

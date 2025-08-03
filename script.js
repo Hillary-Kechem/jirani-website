@@ -9,6 +9,9 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 const ref = db.ref("registrants");
 
+const visitorsRef = db.ref("visitors");
+visitorsRef.push({ time: new Date().toISOString() });
+
 document.getElementById("joinForm").addEventListener("submit", function(e) {
   e.preventDefault();
   const name = document.getElementById("name").value.trim();
@@ -24,4 +27,9 @@ document.getElementById("joinForm").addEventListener("submit", function(e) {
 ref.on("value", snapshot => {
   const count = snapshot.numChildren();
   document.getElementById("counter").textContent = `${count} people have joined`;
+});
+
+document.getElementById("adminBtn").addEventListener("click", () => {
+  // Redirect to admin panel page
+  window.location.href = "admin.html";
 });
